@@ -38,5 +38,5 @@ jobs:
     - name: Upload Artifacts
       uses: actions/upload-artifact@v2
       with:
-        name: systemc-artifacts
-        path: build/
+        name: systemc-${{ github.event.inputs.tagVersion }}
+        path: build/systemc-${{ github.event.inputs.tagVersion }}
