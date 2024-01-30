@@ -31,7 +31,7 @@ jobs:
       run: |
         mkdir build
         cd build
-        cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=systemc-${{ github.event.inputs.tagVersion }}
+        cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_STANDARD=14 -DCMAKE_INSTALL_PREFIX=systemc-${{ github.event.inputs.tagVersion }}
         make
         make install
 
